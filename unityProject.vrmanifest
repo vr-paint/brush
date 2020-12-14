@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.draw_line.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\user\\Desktop\\0616\\draw_line12-07 (2)\\draw_line11-26\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\user\\Documents\\draw_line\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "draw_line [Testing]"
