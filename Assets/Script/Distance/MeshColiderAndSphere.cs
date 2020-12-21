@@ -17,7 +17,7 @@ public class MeshColiderAndSphere : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("RightHand").GetComponent<DrawLine>().Nodelete == true) { }
+        if (GameObject.Find("RightHand").GetComponent<DrawLine>().Nodelete == true) { }//TODO:這可能是個地雷,需要改名 & 想一下是不是全部考慮到
 
         else
         {

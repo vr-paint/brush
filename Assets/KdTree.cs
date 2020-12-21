@@ -339,7 +339,7 @@ public class KdTree<T> : IEnumerable<T>, IEnumerable where T : Component
             if (traversed != null)
                 traversed.Add(current.component);
 
-            var nodeDist = _distance(position, current.component.transform.position);
+            var nodeDist = _distance(position, current.component.transform.position);//TODO: 這裡出現了一堆 exception,要想清楚!!!! 原來是 kdtree 裡的 i,j出錯,拿錯的 transform! 解決!
             if (nodeDist < nearestDist)
             {
                 nearestDist = nodeDist;

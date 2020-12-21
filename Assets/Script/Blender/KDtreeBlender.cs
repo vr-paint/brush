@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class KDtreeBlender : MonoBehaviour
 {
-   
-    private Vector3 LineVerticesPos1, LineVerticesPos2;
     
+    private Vector3 LineVerticesPos1, LineVerticesPos2;
+    KDtreeBlender()
+    {
+        BlenderKdtree = new KdTree<Transform>();
+    }
     public void LineVertices(Vector3 EndPos1, Vector3 EndPos2)
     {
         Closet = GameObject.Find("RightHand").GetComponent<DrawLine>().DrawLineTest;
@@ -45,40 +48,73 @@ public class KDtreeBlender : MonoBehaviour
     }
 
 
-
-    public void Kdtree()
+    public void KdtreeReBuildAll()
     {
-        LineInBox = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
+        MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;//右邊是別的檔案裡定義的
 
         List<Transform> RegisterList = new List<Transform>();
         //建樹過程
-        for (int i = LineInBox.Length - 1; i < LineInBox.Length; i++)
-        {
+
+        //if(MyDrawLine.Length>=1){
+        //    int i = MyDrawLine.Length - 1;
+        //for (int i = LineInBox.Length - 1; i < LineInBox.Length; i++)
+        for (int i=0; i<MyDrawLine.Length-1; i++)//可能會變很慢
+        {//TODO: 這裡有magic魔法/魔術, 有鬼!
+
             int setJ = 0;
-            for (int j = 0; j < LineInBox[i].GetComponent<GraphicsLineRenderer>().vertices.Length; j++)
+            for (int j = 0; j < MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices.Length; j++)
             {
+                //print("現在想要找問題: i:" + i + " j:" + j); 找到問題了, 果然是 setJ vs. j 的觀念錯,讓它的數字沒對應正確
                 if (j % 3 == 0) continue;
 
-                GameObject KdtreeGameObject = new GameObject();
-                KdtreeGameObject.transform.parent = GameObject.Find("KDtree" + i).transform;
-                KdtreeGameObject.name = ("KDtree" + i + "_" + setJ);
-                KdtreeGameObject.AddComponent<SetArray>();
-                KdtreeGameObject.GetComponent<SetArray>().SetI(i);
-                KdtreeGameObject.GetComponent<SetArray>().SetJ(j);
-                float _x = LineInBox[i].GetComponent<GraphicsLineRenderer>().vertices[j].x;
-                float _y = LineInBox[i].GetComponent<GraphicsLineRenderer>().vertices[j].y;
-                float _z = LineInBox[i].GetComponent<GraphicsLineRenderer>().vertices[j].z;
-                KdtreeGameObject.transform.position = new Vector3(_x, _y, _z);
+                GameObject KdtreeGameObject = GameObject.Find("KDtree" + i + "_" + j);
                 RegisterList.Add(KdtreeGameObject.transform);
                 setJ++;
             }
         }
-        BlenderKdtree = new KdTree<Transform>();
+        BlenderKdtree = new KdTree<Transform>();//這裡可以新建 KdTree資料結構,會清空, 因為我們不知道怎麼刪 XD
+        BlenderKdtree.AddAll(RegisterList);
+        //以上是建樹
+
+    }
+    public void KdtreeAdd(int i)
+    {//左邊是這個檔案裡的 MyDrawLine 其實是同一個
+        MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;//右邊是別的檔案裡定義的
+        
+        List<Transform> RegisterList = new List<Transform>();
+        //建樹過程
+
+        //if(MyDrawLine.Length>=1){
+        //    int i = MyDrawLine.Length - 1;
+        //for (int i = LineInBox.Length - 1; i < LineInBox.Length; i++)
+        //for (int i=0; i<MyDrawLine.Length-1; i++)//可能會變很慢
+        if(i>=0){//TODO: 這裡有magic魔法/魔術, 有鬼!
+            
+            //int setJ = 0;
+            for (int j = 0; j < MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices.Length; j++)
+            {
+                if (j % 3 == 0) continue;
+
+                GameObject KdtreeGameObject = new GameObject();//這是建出 Kdtree 裡面的小朋友 (KDtree0_1 之類的)
+                KdtreeGameObject.transform.parent = GameObject.Find("KDtree" + i).transform;//把小朋友的爸爸設好
+                KdtreeGameObject.name = ("KDtree" + i + "_" + j);
+                KdtreeGameObject.AddComponent<SetArray>();
+                KdtreeGameObject.GetComponent<SetArray>().SetI(i);
+                KdtreeGameObject.GetComponent<SetArray>().SetJ(j);
+                float _x = MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices[j].x;
+                float _y = MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices[j].y;
+                float _z = MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices[j].z;
+                KdtreeGameObject.transform.position = new Vector3(_x, _y, _z);
+                RegisterList.Add(KdtreeGameObject.transform);
+                //SetJ++;
+            }
+        }
+        //BlenderKdtree = new KdTree<Transform>();不能在這裡新建 KdTree資料結構,會清空。應該持續用同一個舊的 tree
         BlenderKdtree.AddAll(RegisterList);
         //以上是建樹
     }
 
-    public GameObject[] LineInBox;
+    public GameObject[] MyDrawLine;
     public KdTree<Transform> BlenderKdtree;
     public void Blender()
     {
@@ -86,12 +122,12 @@ public class KDtreeBlender : MonoBehaviour
 
 
         //建樹
-        Kdtree();
+        //Kdtree();
         //建樹
         //以下是查詢
-        LineInBox = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
+        MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
 
-        Vector3[] NewLine = LineInBox[LineInBox.Length - 1].gameObject.GetComponent<GraphicsLineRenderer>().vertices;
+        Vector3[] NewLine = MyDrawLine[MyDrawLine.Length - 1].gameObject.GetComponent<GraphicsLineRenderer>().vertices;
         //GameObject now = BlenderKdtree.FindClosest(new Vector3(0,0,0)).gameObject;
         float check = 999;
         int Register_i = 0;

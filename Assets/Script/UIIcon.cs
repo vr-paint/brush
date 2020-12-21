@@ -172,11 +172,11 @@ public class UIIcon : MonoBehaviour
     void IconClick(bool x)
     {
         
-       
+        //這裡的 程式會很難理解,因為數字變成功能,會很抽象。如果有對照表 or enum 的方法,會容易理解
         if (x == true)
         {
-            if (i == 0)
-            {
+            if (i == 0)//TODO: 天啊!!! 這裡怎麼會有i,太過份了... 要「重新命名」,這是很安全的Visual Studio的重構功能
+            {//以後 i 只能在 for迴圈裡拿來用, 才是易理解的作法
 
 
                 icon_explain[0].transform.gameObject.SetActive(false);
