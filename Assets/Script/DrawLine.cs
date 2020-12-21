@@ -113,24 +113,23 @@ for(int ReArray=0;ReArray<RestartReady.transform.childCount;ReArray++)
         }
     }
      public void MyDrawLessONE()
-    {
+     {
         if(MyDrawLine.Length>1){
           Destroy(MyDrawLine[i-1]);
-            }
-           Destroy(GameObject.Find("KDtree"+(i-1)));
-            Array.Resize(ref MyDrawLine, MyDrawLine.Length - 1);
-            if (MyDrawLine.Length == 0)
-            { 
-                Array.Resize(ref MyDrawLine, MyDrawLine.Length + 1);
-            }
-            i--;
-            if(i<0)i=0;
-            GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().Closet = GameObject.Find("TEST"+(i-1));
- GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().LineInBox = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
- Array.Resize(ref GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().LineInBox, GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().LineInBox.Length -  1);
-  BlenderScript.GetComponent<KDtreeBlender>().Kdtree();
-  
-       }
+        }
+        Destroy(GameObject.Find("KDtree"+(i-1)));
+        Array.Resize(ref MyDrawLine, MyDrawLine.Length - 1);
+        if (MyDrawLine.Length == 0)
+        {
+            Array.Resize(ref MyDrawLine, MyDrawLine.Length + 1);
+        }
+        i--;
+        if(i<0) i=0;
+        GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().Closet = GameObject.Find("TEST"+(i-1));
+        GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().LineInBox = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
+        Array.Resize(ref GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().LineInBox, GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().LineInBox.Length -  1);
+        BlenderScript.GetComponent<KDtreeBlender>().Kdtree();
+    }
     public void MyDrawLineDestroy()
     {
         if (i > 0)
