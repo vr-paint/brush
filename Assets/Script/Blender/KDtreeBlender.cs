@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class KDtreeBlender : MonoBehaviour
 {
-    
+
     private Vector3 LineVerticesPos1, LineVerticesPos2;
     KDtreeBlender()
     {
@@ -44,38 +44,40 @@ public class KDtreeBlender : MonoBehaviour
             Closet.GetComponent<MeshFilter>().mesh.vertices = vertices;
         }
         else {// Debug.Log("Bad"); 
-            }
+        }
     }
 
+    public void ResetMydrawLine() {
+        MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
+        Array.Resize(ref MyDrawLine, MyDrawLine.Length);
+    }
+    public void KdtreeReSet()
+    {
+        BlenderKdtree = new KdTree<Transform>();
+        List<Transform> RegisterList = new List<Transform>();
+        for (int i = 0;i<GameObject.Find("KDTree").transform.childCount-1 ; i++) {
+            for (int j = 0;j<GameObject.Find("KDtree"+i).transform.childCount ; j++) {
+                RegisterList.Add(GameObject.Find("KDtree" + i).transform.GetChild(j));
+            }
+        }
+        BlenderKdtree.AddAll(RegisterList);
+    }
 
     public void KdtreeReBuildAll()
     {
         MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;//右邊是別的檔案裡定義的
-
         List<Transform> RegisterList = new List<Transform>();
-        //建樹過程
-
-        //if(MyDrawLine.Length>=1){
-        //    int i = MyDrawLine.Length - 1;
-        //for (int i = LineInBox.Length - 1; i < LineInBox.Length; i++)
-        for (int i=0; i<MyDrawLine.Length-1; i++)//可能會變很慢
-        {//TODO: 這裡有magic魔法/魔術, 有鬼!
-
-            int setJ = 0;
+        for (int i=0; i<MyDrawLine.Length-1; i++)
+        {
             for (int j = 0; j < MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices.Length; j++)
-            {
-                //print("現在想要找問題: i:" + i + " j:" + j); 找到問題了, 果然是 setJ vs. j 的觀念錯,讓它的數字沒對應正確
+            {   
                 if (j % 3 == 0) continue;
-
                 GameObject KdtreeGameObject = GameObject.Find("KDtree" + i + "_" + j);
                 RegisterList.Add(KdtreeGameObject.transform);
-                setJ++;
             }
         }
-        BlenderKdtree = new KdTree<Transform>();//這裡可以新建 KdTree資料結構,會清空, 因為我們不知道怎麼刪 XD
+        BlenderKdtree = new KdTree<Transform>();
         BlenderKdtree.AddAll(RegisterList);
-        //以上是建樹
-
     }
     public void KdtreeAdd(int i)
     {//左邊是這個檔案裡的 MyDrawLine 其實是同一個

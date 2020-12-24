@@ -33,7 +33,7 @@ public class DrawLine : MonoBehaviour
     void Start()
     {
 
- 
+
         MyDrawLine = new GameObject[1];
         BlenderScript = GameObject.Find("BlenderEmpty");
     }
@@ -42,67 +42,58 @@ public class DrawLine : MonoBehaviour
         if (Button == false) { }
         else
         {
-            for (int ReArray = a; ReArray < MyDrawLine.Length - 1; ReArray++)
+            if (MyDrawLine.Length > 1)
             {
-                MyDrawLine[ReArray] = MyDrawLine[ReArray + 1];
+
+                Destroy(MyDrawLine[a]);
+                RestartDrawLine(a);
+                Destroy(GameObject.Find("KDtree" + a));
+                RestartKDtree(a);
+                i = MyDrawLine.Length - 1;
+                GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().Closet = GameObject.Find("TEST" + (i - 1));
+                GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().KdtreeReSet();
+
+
             }
-            Array.Resize(ref MyDrawLine, MyDrawLine.Length - 1);
-            if (MyDrawLine.Length <= 3)
-            {
-                for (int ReArray = a; ReArray < MyDrawLine.Length - 1; ReArray++)
-                {
-                    MyDrawLine[ReArray].name = "TEST" + ReArray;
-                }
-            }
-            else
-            {
-                for (int ReArray = a; ReArray < MyDrawLine.Length - 1; ReArray++)
-                {
-                    MyDrawLine[ReArray].name = "TEST" + ReArray;
-                }
-            }
-            for (int Rename = a + 1; a < MyDrawLine.Length - 1; Rename++)
-            {
-                if (GameObject.Find("KDtree" + Rename) == null) { break; }
-                GameObject.Find("KDtree" + Rename).name = "KDtree" + (Rename - 1);
-            }
-            for (int Rename = 0; Rename < MyDrawLine.Length; Rename++)
-            {
-                if (GameObject.Find("KDtree0") == null)
-                {
-                    break;
-                }
-               if (GameObject.Find("KDtree" + Rename) == null)
-                {
-                    break;
-                }
-            }
-            i = MyDrawLine.Length - 1;
-            if (i < 0) i = 0;
-            Restart();
         }
     }
-    void Restart(){
+    public void RestartDrawLine(int _a)
+    {
+        for (int a = _a; a < MyDrawLine.Length - 1; a++)
+        {
+            MyDrawLine[a].name = "TEST" + (a - 1);
+        }
+        for (int a = _a; a < MyDrawLine.Length - 1; a++)
+        {
+            MyDrawLine[a] = MyDrawLine[a + 1];
+        }
+        Array.Resize(ref MyDrawLine, MyDrawLine.Length - 1);
+        GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().ResetMydrawLine();
+    }
+    public void RestartKDtree(int _a)
+    {
+        for (int a = _a; a < GameObject.Find("KDTree").transform.childCount; a++)
+        {
+            GameObject.Find("KDTree").transform.GetChild(a).name = "KDtree" + (a - 1);
+        }
+        for (int a = _a; a < GameObject.Find("KDTree").transform.childCount - 1; a++)
+        {
+            for (int b = 0; b < GameObject.Find("KDtree" + a).transform.childCount; b++)
+            {
+                GameObject.Find("KDtree" + a).transform.GetChild(b).GetComponent<SetArray>().I = a;
+                int J = GameObject.Find("KDtree" + a).transform.GetChild(b).GetComponent<SetArray>().J;
+                GameObject.Find("KDtree" + a).transform.GetChild(b).name = "KDtree" + a + "_" + J;
+            }
+        }
+    }
 
-        GameObject RestartReady=GameObject.Find("KDTree");
-for(int ReArray=0;ReArray<RestartReady.transform.childCount;ReArray++)
-{
-  
-   for(int ReChildArray=0;ReChildArray<RestartReady.transform.GetChild(ReArray).transform.childCount;ReChildArray++){
-    RestartReady.transform.GetChild(ReArray).transform.GetChild(ReChildArray).name=RestartReady.transform.GetChild(ReArray).name+"_"+ReChildArray;
-    string[] stringSeparators = new string[] { "KDtree" };
-    string[] result = RestartReady.transform.GetChild(ReArray).name.Split(stringSeparators, StringSplitOptions.None);
-    int a = int.Parse(result[1]);
-    RestartReady.transform.GetChild(ReArray).transform.GetChild(ReChildArray).GetComponent<SetArray>().SetI(a);
-   }
-  
-}
-
+    void Restart()
+    {
     }
 
     public void MyDrawLess()
     {   //TODO: 因為 MyDrawLine比它的長度再多1,所以只好從 -2開始往回刪
-        for(int i=MyDrawLine.Length-2; i>=0; i--)//從右往左刪
+        for (int i = MyDrawLine.Length - 2; i >= 0; i--)//從右往左刪
         {
             Destroy(MyDrawLine[i]);
             Destroy(GameObject.Find("KDtree" + i));
@@ -124,50 +115,40 @@ for(int ReArray=0;ReArray<RestartReady.transform.childCount;ReArray++)
         //}
     }
     public void MyDrawLessONE()
-     {
-        print("要比一下2個值: i:" + i + " MyDrawLine.Length:" + MyDrawLine.Length );
-        if(MyDrawLine.Length>1){//MyDrawLine會比 KDtree多1, 也會比完整的 Line 多1。因為它要用來多放1個未來正在畫到一半的線
-print("1.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
-            Destroy(MyDrawLine[i-1]);//這個和前面 MyDrawLess()很像
-print("2.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
+    {
+        if (MyDrawLine.Length > 1)
+        {//MyDrawLine會比 KDtree多1, 也會比完整的 Line 多1。因為它要用來多放1個未來正在畫到一半的線
+            Destroy(MyDrawLine[i - 1]);//這個和前面 MyDrawLess()很像
             Destroy(GameObject.Find("KDtree" + (i - 1)));//這個和前面 MyDrawLess()很像, 爸爸死掉,裡面的小朋友跟著死掉 (當初是在 KDtreeBlender.cs裡面新增的)
-print("3.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
             Array.Resize(ref MyDrawLine, MyDrawLine.Length - 1);//這個和前面 MyDrawLess()很像, Q: 要留1個嗎?
             i--;
-            print("4.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
-            //if (MyDrawLine.Length == 0)
             //{
             //    Array.Resize(ref MyDrawLine, MyDrawLine.Length + 1);//TODO: 這就是之前提過的奇怪的地雷
             //}
             //if (i<0) i=0;
-            GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().Closet = GameObject.Find("TEST"+(i-1));//Closet這個單字之後要重構新名字
-print("5.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
-            //GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
-print("6.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
-            //jsyeh: 可能會用? 先不要減 
-            Array.Resize(ref GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().MyDrawLine, GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().MyDrawLine.Length -  1);
+            GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().Closet = GameObject.Find("TEST" + (i - 1));//Closet這個單字之後要重構新名字
+                                                                                                                     //GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
+                                                                                                                     //jsyeh: 可能會用? 先不要減 
+            Array.Resize(ref GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().MyDrawLine, GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().MyDrawLine.Length - 1);
             // BlenderScript.GetComponent<KDtreeBlender>().Kdtree();//Q: 為什麼刪掉時,要建 KDtree() ?
-print("7.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
-
 
             GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().KdtreeReBuildAll();
         }
-        print("8.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
+
     }
     public void MyDrawLineDestroy()
     {
         if (i > 0)
         {
-            Debug.Log(i);
             MyDrawLess();
         }
     }
 
     public float Change;
-    public float ChangeS =1.0f;
+    public float ChangeS = 1.0f;
     public void ChangeColorRecive(float H)
     {
-       
+
         Change = H;
     }
     public void ChangeColorRecive2(float H)
@@ -179,13 +160,13 @@ print("7.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
         gObjectMaterial = new Material(Shader.Find("Standard"));
         gObjectMaterial.color = Color.HSVToRGB(Change, ChangeS, 1.0f);
     }
-    public bool Nodelete = false; 
+    public bool Nodelete = false;
     void Update()
     {
 
         now = Pose.transform.position;
         float dist = Vector3.Distance(older, now);
-        if (Squeeze.GetAxis(Pose.inputSource)>0.1f &&end == false)
+        if (Squeeze.GetAxis(Pose.inputSource) > 0.1f && end == false)
         {
             if (GameObject.Find("LeftHand").GetComponent<UIIcon>().Eraser.activeSelf == true)
             {
@@ -202,13 +183,13 @@ print("7.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
             DrawLineTest.transform.gameObject.tag = "test";
             //DrawLineTest.GetComponent<MeshCollider>().isTrigger = true;
             draw = DrawLineTest.AddComponent<GraphicsLineRenderer>();
-          
+
             ChangeColor();
             draw.Imat = gObjectMaterial;
             draw.setVectorCross(Pose.transform.up, Pose.transform.forward);
             draw.setwidth(LineWidth);
             draw.AddPoint(now);
-            
+
 
             DrawLineTest.name = "TEST" + i;
 
@@ -218,16 +199,16 @@ print("7.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
         {
             if (dist > 0.03)
             {
-                
+
                 draw.ErrorCheck = true;
-                draw.setwidth2(Squeeze.GetAxis(Pose.inputSource) );
+                draw.setwidth2(Squeeze.GetAxis(Pose.inputSource));
                 draw.setVectorCross(Pose.transform.up, Pose.transform.forward);
                 draw.AddPoint(now);
                 older = now;
             }
 
         }
-        if (Squeeze.GetAxis(Pose.inputSource) <0.1f && end == true)//TODO: 加一下註解, 這個 if()是什麼意思
+        if (Squeeze.GetAxis(Pose.inputSource) < 0.1f && end == true)//TODO: 加一下註解, 這個 if()是什麼意思
         {
             Nodelete = false;//TODO:這可能是個地雷,需要改名 & 想一下是不是全部考慮到
             if (MyDrawLine.Length < 1) { }
@@ -274,11 +255,11 @@ print("7.現在的i:" + i + " 現在的MyDrawLine.Length:" + MyDrawLine.Length);
             //Debug.Log("Yes:" + LineWidth);
             Box.BoxControlWidth(LineWidth);
             //Debug.Log(LineWidth);
-
         }*/
 
     }
-    public void KdTreeInstanceFunction(){
+    public void KdTreeInstanceFunction()
+    {
         GameObject KDTreeInstance = new GameObject();
         KDTreeInstance.name = "KDtree" + i;//這是第i條的彩帶
         KDTreeInstance.transform.parent = GameObject.Find("KDTree").transform;

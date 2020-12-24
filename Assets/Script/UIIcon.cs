@@ -218,7 +218,7 @@ public class UIIcon : MonoBehaviour
             }
             */
 
-            if (i ==3 )
+            if (i ==4 )
             {
                 //icon_explain[3].transform.gameObject.SetActive(false);
 
@@ -226,7 +226,7 @@ public class UIIcon : MonoBehaviour
                 Eraser.transform.gameObject.SetActive(true);
                 IconClick_bool = false;
             }
-            if (i == 4)
+            if (i == 3)
             {
                 //icon_explain[4].transform.gameObject.SetActive(false);
 
