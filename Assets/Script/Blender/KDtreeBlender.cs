@@ -53,10 +53,13 @@ public class KDtreeBlender : MonoBehaviour
     }
     public void KdtreeReSet()
     {
+
         BlenderKdtree = new KdTree<Transform>();
         List<Transform> RegisterList = new List<Transform>();
         for (int i = 0;i<GameObject.Find("KDTree").transform.childCount-1 ; i++) {
             for (int j = 0;j<GameObject.Find("KDtree"+i).transform.childCount ; j++) {
+          
+
                 RegisterList.Add(GameObject.Find("KDtree" + i).transform.GetChild(j));
             }
         }
@@ -72,6 +75,7 @@ public class KDtreeBlender : MonoBehaviour
             for (int j = 0; j < MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices.Length; j++)
             {   
                 if (j % 3 == 0) continue;
+
                 GameObject KdtreeGameObject = GameObject.Find("KDtree" + i + "_" + j);
                 RegisterList.Add(KdtreeGameObject.transform);
             }

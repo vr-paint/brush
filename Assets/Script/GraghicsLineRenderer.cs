@@ -68,7 +68,7 @@ public class GraphicsLineRenderer : MonoBehaviour
         Vector3[] qd;
         if (all) qd = new Vector3[6];
         else qd = new Vector3[3];
-     GameObject Change;
+    // GameObject Change;
         if (all)
         {
             qd[0] = transform.InverseTransformPoint(o);

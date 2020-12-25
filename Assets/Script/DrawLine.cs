@@ -93,10 +93,12 @@ public class DrawLine : MonoBehaviour
 
     public void MyDrawLess()
     {   //TODO: 因為 MyDrawLine比它的長度再多1,所以只好從 -2開始往回刪
+        GameObject.Find("Resume").GetComponent<Resume>().get();
         for (int i = MyDrawLine.Length - 2; i >= 0; i--)//從右往左刪
         {
             Destroy(MyDrawLine[i]);
             Destroy(GameObject.Find("KDtree" + i));
+          
         }
         i = 0;//TODO: 這裡之後要重構,global變數名稱不應該用local可能會用到的名字
         Array.Resize(ref MyDrawLine, 1);//這裡不確定會不會要留1 or 留0, 有個奇怪的地雷,使得陣列要比使用的+1

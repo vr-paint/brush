@@ -76,7 +76,6 @@ public class UIIcon : MonoBehaviour
         }
         if (GrabPinch.GetStateDown(Pose.inputSource))
         {
-
             IconClick(IconClick_bool);
         }
         if (SnapTurnRight.GetStateDown(Pose.inputSource))
@@ -90,15 +89,21 @@ public class UIIcon : MonoBehaviour
             IconSwitch_bool = false;
             IconSwitch(IconSwitch_bool);
         }
+    
         if (GrapGrip.GetStateDown(Pose.inputSource))
         {
+
+            if (i == 3) {
+
+                GameObject.Find("Resume").GetComponent<Resume>().RecoverLineRender();
+            }
             if (SwitchSystem % 2 == 1)
             { BoolGrip = true;
-                Debug.Log("True");
+          
             }
             else
             {
-                Debug.Log("False");
+
                 BoolGrip = false;
             }
             SwitchSystem++;
@@ -226,12 +231,14 @@ public class UIIcon : MonoBehaviour
                 Eraser.transform.gameObject.SetActive(true);
                 IconClick_bool = false;
             }
+            if (GrapGrip.GetStateDown(Pose.inputSource)) { Debug.Log(i); }
             if (i == 3)
             {
                 //icon_explain[4].transform.gameObject.SetActive(false);
 
                 //  sound_clear.transform.gameObject.SetActive(true);
                 drawline.MyDrawLineDestroy();
+
             }
             
 
