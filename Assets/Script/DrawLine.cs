@@ -116,6 +116,7 @@ public class DrawLine : MonoBehaviour
         //    i--;
         //}
     }
+  
     public void MyDrawLessONE()
     {
         if (MyDrawLine.Length > 1)
@@ -267,6 +268,8 @@ public class DrawLine : MonoBehaviour
         KDTreeInstance.transform.parent = GameObject.Find("KDTree").transform;
         BlenderScript.GetComponent<KDtreeBlender>().KdtreeAdd(i);//Q: 這是建 Kdtree Q:是建1條? 還是建全部? A: 這是建第i條的 Kdtree_i 及裡面的小朋友
         Array.Resize(ref MyDrawLine, MyDrawLine.Length + 1);
+        GameObject.Find("Resume").GetComponent<Resume>().NotTouchGet();
         i++;
+
     }
 }

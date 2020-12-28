@@ -116,8 +116,9 @@ public class GraphicsLineRenderer : MonoBehaviour
        // Debug.Log(vertices[vertices.Length-1]);
       //  Debug.Log(vertices[vertices.Length-2]);
         GameObject.Find("BlenderEmpty").GetComponent<KDtreeBlender>().LineVertices(vertices[vertices.Length - 2], vertices[vertices.Length - 1]);
-    
 
+
+     
     }
 
     private Vector3[] qd1 = new Vector3[2];

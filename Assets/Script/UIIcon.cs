@@ -67,7 +67,7 @@ public class UIIcon : MonoBehaviour
         GameObject.Find("LeftHand").GetComponent<Trush4>().enabled = false;
     }
 
-
+  public  bool onlyOneTime = false;
     void Update()
     {
         if (SnapTurnUp.GetStateDown(Pose.inputSource))
@@ -93,8 +93,8 @@ public class UIIcon : MonoBehaviour
         if (GrapGrip.GetStateDown(Pose.inputSource))
         {
 
-            if (i == 3) {
-
+            if (i == 3&&onlyOneTime==true) {
+                onlyOneTime = false;
                 GameObject.Find("Resume").GetComponent<Resume>().RecoverLineRender();
             }
             if (SwitchSystem % 2 == 1)
@@ -186,7 +186,7 @@ public class UIIcon : MonoBehaviour
 
                 icon_explain[0].transform.gameObject.SetActive(false);
 
-                Debug.Log("GripTrue");
+
              //   sound_click.transform.gameObject.SetActive(true);
                 TrueFalse.gameObject.SetActive(false);
                 IconClick_bool = false;
@@ -235,10 +235,10 @@ public class UIIcon : MonoBehaviour
             if (i == 3)
             {
                 //icon_explain[4].transform.gameObject.SetActive(false);
-
+                onlyOneTime = true;
                 //  sound_clear.transform.gameObject.SetActive(true);
                 drawline.MyDrawLineDestroy();
-
+       
             }
             
 

@@ -26,7 +26,6 @@ public class KDtreeBlender : MonoBehaviour
 
     public void find(Vector3 LVPOS1, Vector3 LVPOS2)
     {
-        //Debug.Log("Test");
         if (Vector3.Distance(LVPOS1, BlenderKdtree.FindClosest(LVPOS1).transform.position) < 0.05)
         {
             //Closet.GetComponent<MeshFilter>().mesh.vertices;
@@ -35,7 +34,8 @@ public class KDtreeBlender : MonoBehaviour
             Closet.GetComponent<MeshFilter>().mesh.vertices = vertices;
             //LineInBox[oldLine].gameObject.GetComponent<MeshFilter>().mesh.vertices = LineInBox[oldLine].gameObject.GetComponent<GraphicsLineRenderer>().vertices;
         }
-        else {// Debug.Log("GOOD"); 
+        else
+        {// Debug.Log("GOOD"); 
         }
         if (Vector3.Distance(LVPOS2, BlenderKdtree.FindClosest(LVPOS2).transform.position) < 0.05)
         {
@@ -43,11 +43,13 @@ public class KDtreeBlender : MonoBehaviour
             vertices[vertices.Length - 1] = BlenderKdtree.FindClosest(LVPOS2).transform.position;
             Closet.GetComponent<MeshFilter>().mesh.vertices = vertices;
         }
-        else {// Debug.Log("Bad"); 
+        else
+        {// Debug.Log("Bad"); 
         }
     }
 
-    public void ResetMydrawLine() {
+    public void ResetMydrawLine()
+    {
         MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;
         Array.Resize(ref MyDrawLine, MyDrawLine.Length);
     }
@@ -56,24 +58,35 @@ public class KDtreeBlender : MonoBehaviour
 
         BlenderKdtree = new KdTree<Transform>();
         List<Transform> RegisterList = new List<Transform>();
-        for (int i = 0;i<GameObject.Find("KDTree").transform.childCount-1 ; i++) {
-            for (int j = 0;j<GameObject.Find("KDtree"+i).transform.childCount ; j++) {
-          
-
+        for (int i = 0; i < GameObject.Find("KDTree").transform.childCount - 1; i++)
+        {
+            for (int j = 0; j < GameObject.Find("KDtree" + i).transform.childCount; j++)
+            {
                 RegisterList.Add(GameObject.Find("KDtree" + i).transform.GetChild(j));
             }
         }
         BlenderKdtree.AddAll(RegisterList);
     }
-
+    public void KdtreeReSetResume()
+    {
+        BlenderKdtree = new KdTree<Transform>();
+        List<Transform> RegisterList = new List<Transform>();
+        int i = 0;
+        Debug.Log("TEst");
+        for (int j = 0; j < GameObject.Find("KDtree" + i).transform.childCount; j++)
+        {
+            RegisterList.Add(GameObject.Find("KDtree" + i).transform.GetChild(j));
+        }
+        BlenderKdtree.AddAll(RegisterList);
+    }
     public void KdtreeReBuildAll()
     {
         MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;//右邊是別的檔案裡定義的
         List<Transform> RegisterList = new List<Transform>();
-        for (int i=0; i<MyDrawLine.Length-1; i++)
+        for (int i = 0; i < MyDrawLine.Length - 1; i++)
         {
             for (int j = 0; j < MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices.Length; j++)
-            {   
+            {
                 if (j % 3 == 0) continue;
 
                 GameObject KdtreeGameObject = GameObject.Find("KDtree" + i + "_" + j);
@@ -86,7 +99,7 @@ public class KDtreeBlender : MonoBehaviour
     public void KdtreeAdd(int i)
     {//左邊是這個檔案裡的 MyDrawLine 其實是同一個
         MyDrawLine = GameObject.Find("RightHand").GetComponent<DrawLine>().MyDrawLine;//右邊是別的檔案裡定義的
-        
+
         List<Transform> RegisterList = new List<Transform>();
         //建樹過程
 
@@ -94,9 +107,11 @@ public class KDtreeBlender : MonoBehaviour
         //    int i = MyDrawLine.Length - 1;
         //for (int i = LineInBox.Length - 1; i < LineInBox.Length; i++)
         //for (int i=0; i<MyDrawLine.Length-1; i++)//可能會變很慢
-        if(i>=0){//TODO: 這裡有magic魔法/魔術, 有鬼!
-            
+        if (i >= 0)
+        {//TODO: 這裡有magic魔法/魔術, 有鬼!
+
             //int setJ = 0;
+
             for (int j = 0; j < MyDrawLine[i].GetComponent<GraphicsLineRenderer>().vertices.Length; j++)
             {
                 if (j % 3 == 0) continue;
