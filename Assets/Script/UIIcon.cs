@@ -15,8 +15,8 @@ public class UIIcon : MonoBehaviour
     public SteamVR_Action_Boolean SnapTurnDown;
     public SteamVR_Action_Boolean Teleport;
     private SteamVR_Behaviour_Pose Pose;
-    public GameObject[] icon = new GameObject[4];
-    public GameObject[] icon_explain = new GameObject[4];
+    public GameObject[] icon = new GameObject[5];
+    public GameObject[] icon_explain = new GameObject[5];
     private int i = 0;
     private int j = 0;
     private SpriteRenderer Go1;
@@ -46,10 +46,14 @@ public class UIIcon : MonoBehaviour
         icon[1].transform.gameObject.SetActive(false);
         icon[2].transform.gameObject.SetActive(false);
         icon[3].transform.gameObject.SetActive(false);
+        icon[4].transform.gameObject.SetActive(false);
+        icon[5].transform.gameObject.SetActive(false);
         icon_explain[0].transform.gameObject.SetActive(true);
         icon_explain[1].transform.gameObject.SetActive(false);
         icon_explain[2].transform.gameObject.SetActive(false);
         icon_explain[3].transform.gameObject.SetActive(false);
+        icon_explain[4].transform.gameObject.SetActive(false);
+        icon_explain[5].transform.gameObject.SetActive(false);
         //icon[4].transform.gameObject.SetActive(false);
         teleport.transform.gameObject.SetActive(false);
         teleport2.transform.gameObject.SetActive(false);
@@ -80,23 +84,24 @@ public class UIIcon : MonoBehaviour
         }
         if (SnapTurnRight.GetStateDown(Pose.inputSource))
         {
+            Close();
             IconSwitch_bool = true;
             IconSwitch(IconSwitch_bool);
+       
         }
 
         if (SnapTurnLeft.GetStateDown(Pose.inputSource))
         {
+            Close();
             IconSwitch_bool = false;
             IconSwitch(IconSwitch_bool);
+          
         }
     
         if (GrapGrip.GetStateDown(Pose.inputSource))
         {
 
-            if (i == 3&&onlyOneTime==true) {
-                onlyOneTime = false;
-                GameObject.Find("Resume").GetComponent<Resume>().RecoverLineRender();
-            }
+            
             if (SwitchSystem % 2 == 1)
             { BoolGrip = true;
           
@@ -120,7 +125,7 @@ public class UIIcon : MonoBehaviour
         {
             icon[i].transform.gameObject.SetActive(false);
             icon_explain[i].transform.gameObject.SetActive(false);
-            if (i + 1 == 5)
+            if (i + 1 == 6)
             {
                 i = -1;
             }
@@ -131,13 +136,13 @@ public class UIIcon : MonoBehaviour
 
             int i1 = i;
             int i2 = i;
-            if (i1 + 1 == 5)
+            if (i1 + 1 == 6)
             {
                 i1 = -1;
             }
             if (i2 == 0)
             {
-                i2 = 5;
+                i2 = 6;
             }
             Go1.sprite = icon[i1 + 1].GetComponentInChildren<SpriteRenderer>().sprite;
             Go2.sprite = icon[i2 - 1].GetComponentInChildren<SpriteRenderer>().sprite;
@@ -149,7 +154,7 @@ public class UIIcon : MonoBehaviour
             icon_explain[i].transform.gameObject.SetActive(false);
             if (i - 1 == -1)
             {
-                i = 5;
+                i = 6;
             }
 
             icon[i - 1].transform.gameObject.SetActive(true);
@@ -161,9 +166,9 @@ public class UIIcon : MonoBehaviour
             int i2 = i;
             if (i2 - 1 == -1)
             {
-                i2 = 5;
+                i2 = 6;
             }
-            if (i1 == 4)
+            if (i1 == 5)
             {
                 i1 = -1;
             }
@@ -173,6 +178,26 @@ public class UIIcon : MonoBehaviour
         }
         // sound_change.transform.gameObject.SetActive(false);//須測試
     }
+    void Close() {
+        SwitchSystem = 0;
+        if (ColorChoose.gameObject.activeSelf == true) { GameObject.Find("LeftHand").GetComponent<Trush4>().RadioSliderImage.SetActive(true); }
+   
+        GameObject.Find("LeftHand").GetComponent<Trush4>().SliderSwitch = false;
+        BoolGrip = true;
+       
+        GameObject.Find("LeftHand").GetComponent<Trush4>().enabled = false;
+        TrueFalse.gameObject.SetActive(true);
+        ColorChoose.gameObject.SetActive(false);
+        //color
+        teleport.transform.gameObject.SetActive(false);
+        teleport2.transform.gameObject.SetActive(false);
+        //tele
+        Eraser.transform.gameObject.SetActive(false);
+        //eraser
+        IconClick_bool = true;
+        
+    }
+    
    public bool BoolGrip = true;
     void IconClick(bool x)
     {
@@ -194,8 +219,10 @@ public class UIIcon : MonoBehaviour
      
 
                 GameObject.Find("LeftHand").GetComponent<Trush4>().enabled = true;
-             
-        }
+
+
+
+            }
             if (i == 1)
             {
                 icon_explain[1].transform.gameObject.SetActive(false);
@@ -222,8 +249,22 @@ public class UIIcon : MonoBehaviour
                 drawline.MyDrawLineDestroy();
             }
             */
+            if (i == 3 && onlyOneTime == true)
+            {
+              
+                onlyOneTime = false;
+                GameObject.Find("Resume").GetComponent<Resume>().RecoverLineRender();
 
-            if (i ==4 )
+            }
+
+            if (i == 4)
+            {
+                //icon_explain[4].transform.gameObject.SetActive(false);
+                onlyOneTime = true;
+                //  sound_clear.transform.gameObject.SetActive(true);
+                drawline.MyDrawLineDestroy();
+            }
+            if (i == 5)
             {
                 //icon_explain[3].transform.gameObject.SetActive(false);
 
@@ -231,16 +272,7 @@ public class UIIcon : MonoBehaviour
                 Eraser.transform.gameObject.SetActive(true);
                 IconClick_bool = false;
             }
-            if (GrapGrip.GetStateDown(Pose.inputSource)) { Debug.Log(i); }
-            if (i == 3)
-            {
-                //icon_explain[4].transform.gameObject.SetActive(false);
-                onlyOneTime = true;
-                //  sound_clear.transform.gameObject.SetActive(true);
-                drawline.MyDrawLineDestroy();
-       
-            }
-            
+
 
         }
 
@@ -255,11 +287,16 @@ public class UIIcon : MonoBehaviour
                 GameObject.Find("LeftHand").GetComponent<Trush4>().SliderSwitch = false;
                 BoolGrip = true;
                 GameObject.Find("LeftHand").GetComponent<Trush4>().RadioSliderImage.SetActive(true);
+                icon_explain[0].transform.gameObject.SetActive(true);
+
             }
 
             TrueFalse.gameObject.SetActive(true);
             IconClick_bool = true;
             ColorChoose.gameObject.SetActive(false);
+            if (i == 1) { 
+            icon_explain[1].transform.gameObject.SetActive(true);
+            }
             teleport.transform.gameObject.SetActive(false);
             teleport2.transform.gameObject.SetActive(false);
             Eraser.transform.gameObject.SetActive(false);

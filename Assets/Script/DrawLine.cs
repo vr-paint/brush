@@ -200,7 +200,7 @@ public class DrawLine : MonoBehaviour
         }
         else if (Squeeze.GetAxis(Pose.inputSource) > 0.1)
         {
-            if (dist > 0.03)
+            if (dist > 0.015)
             {
 
                 draw.ErrorCheck = true;

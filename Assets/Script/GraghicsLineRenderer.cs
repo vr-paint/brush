@@ -46,6 +46,18 @@ public class GraphicsLineRenderer : MonoBehaviour
     public void setwidth2(float ws)
     {
         lineWidthInSqueeze = ws;
+        /*
+        if (ws > 0.9f) lineWidthInSqueeze = 1.0f;
+        else if (ws > 0.8f) lineWidthInSqueeze = 0.9f;
+        else if (ws > 0.7f) lineWidthInSqueeze = 0.8f;
+        else if (ws > 0.6f) lineWidthInSqueeze = 0.7f;
+        else if (ws > 0.5f) lineWidthInSqueeze = 0.6f;
+        else if (ws > 0.4f) lineWidthInSqueeze = 0.5f;
+        else if (ws > 0.3f) lineWidthInSqueeze = 0.4f;
+        else if (ws > 0.2f) lineWidthInSqueeze = 0.3f;
+        else if (ws > 0.1f) lineWidthInSqueeze = 0.2f;
+        else lineWidthInSqueeze = 0.1f;*/
+
     }
     public void setVectorCross(Vector3 a, Vector3 b)
     {
