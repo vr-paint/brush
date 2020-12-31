@@ -14,7 +14,7 @@ public class DrawLine : MonoBehaviour
     public SteamVR_Action_Single Squeeze;
     private SteamVR_Behaviour_Pose Pose;
     public GraphicsLineRenderer draw;
-    public Boxwidth Box;
+
     public int N = 0;
     public int i = 0;
     public int colorchangecount = 0;
