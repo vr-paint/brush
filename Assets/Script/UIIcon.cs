@@ -189,6 +189,7 @@ public class UIIcon : MonoBehaviour
         TrueFalse.gameObject.SetActive(true);
         ColorChoose.gameObject.SetActive(false);
         //color
+   
         teleport.transform.gameObject.SetActive(false);
         teleport2.transform.gameObject.SetActive(false);
         //tele
