@@ -28,3 +28,6 @@ draw_line 專案，這是邵鈞組 VR draw 的專案，使用 Unity 2019.4.10f1
 4.最後按下面的儲存個人配置。就可以使用調色盤介面。
 
 專案Youtube影片連結：https://youtu.be/XmyNU33L2q0
+
+
+![image](https://github.com/jsyeh/draw_line/blob/main/Assets/icon/undo.png)
