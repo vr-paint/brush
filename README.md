@@ -30,4 +30,4 @@ draw_line 專案，這是邵鈞組 VR draw 的專案，使用 Unity 2019.4.10f1
 專案Youtube影片連結：https://youtu.be/XmyNU33L2q0
 
 
-![image](https://github.com/jsyeh/draw_line/blob/main/Assets/icon/undo.png)
+![image](https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png)
