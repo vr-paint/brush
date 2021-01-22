@@ -1,6 +1,8 @@
 # vr_draw
 draw_line 專案，這是邵鈞組 VR draw 的專案，使用 Unity 2019.4.10f1
 
+專案Youtube影片連結：https://youtu.be/XmyNU33L2q0
+
 # 簡介
 此專案可以在VR空間中畫圖，左右手有不同的功能可供使用。
 由於是VR類型的專案，當出現調色盤無法使用的情況，請參考最下面的解決方法。
@@ -27,11 +29,9 @@ draw_line 專案，這是邵鈞組 VR draw 的專案，使用 Unity 2019.4.10f1
 
 4.最後按下面的儲存個人配置。就可以使用調色盤介面。
 
-專案Youtube影片連結：https://youtu.be/XmyNU33L2q0
 
 
 
-![image]()
 
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="350">
 
