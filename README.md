@@ -7,8 +7,8 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
   + [Unity安裝說明](https://github.com/jsyeh/draw_line#unity%E5%AE%89%E8%A3%9D%E8%AA%AA%E6%98%8E)
   + [VR操作準備](https://github.com/jsyeh/draw_line#vr%E6%93%8D%E4%BD%9C%E6%BA%96%E5%82%99)
   + [手把控制器按鍵說明](https://github.com/jsyeh/draw_line#%E6%89%8B%E6%8A%8A%E6%8E%A7%E5%88%B6%E5%99%A8%E6%8C%89%E9%8D%B5%E8%AA%AA%E6%98%8E)
-  + [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
-  + [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
+    + [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
+    + [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
 ***
 # 簡介
@@ -33,14 +33,14 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="300">
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="300">
 
-## 右手手把操作
+### 右手手把操作
 右手手把是畫線的，該手把上面沒有ICON功能鍵。下圖為操作圖：  
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/righthand_buttom.png" height="350">  
  
 1. 扣下扳機鍵即可繪製出具有3D立體感的平面，這些平面會化成使用者作畫的線條存在在3D空間當中。
 2. 使用者可以透過扣手把板機的力道決定線條的粗細，減少了調整粗細的ICON，使得使用者操作變得更加方便。
 
-## 左手手把操作
+### 左手手把操作
 左手手把的主要作用是繪畫功能選擇，下圖為操作圖：  
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/trigger_side.png" height="350">  
  
