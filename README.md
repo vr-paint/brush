@@ -33,7 +33,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="300">
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="300">
 
-<img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="250"><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="250">
+<img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="260"><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="260">
 
 ### 右手手把操作
 右手手把是畫線的，該手把上面沒有ICON功能鍵。下圖為操作圖：  
