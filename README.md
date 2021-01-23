@@ -4,11 +4,11 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 ## Link
 + [簡介](https://github.com/jsyeh/draw_line#%E7%B0%A1%E4%BB%8B)
 + [系統使用](https://github.com/jsyeh/draw_line#%E7%B3%BB%E7%B5%B1%E4%BD%BF%E7%94%A8)
-> + [Unity安裝說明](https://github.com/jsyeh/draw_line#unity%E5%AE%89%E8%A3%9D%E8%AA%AA%E6%98%8E)
-> + [VR操作準備](https://github.com/jsyeh/draw_line#vr%E6%93%8D%E4%BD%9C%E6%BA%96%E5%82%99)
-> + [手把控制器按鍵說明](https://github.com/jsyeh/draw_line#%E6%89%8B%E6%8A%8A%E6%8E%A7%E5%88%B6%E5%99%A8%E6%8C%89%E9%8D%B5%E8%AA%AA%E6%98%8E)
-> + [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
-> + [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
+  + [Unity安裝說明](https://github.com/jsyeh/draw_line#unity%E5%AE%89%E8%A3%9D%E8%AA%AA%E6%98%8E)
+  + [VR操作準備](https://github.com/jsyeh/draw_line#vr%E6%93%8D%E4%BD%9C%E6%BA%96%E5%82%99)
+  + [手把控制器按鍵說明](https://github.com/jsyeh/draw_line#%E6%89%8B%E6%8A%8A%E6%8E%A7%E5%88%B6%E5%99%A8%E6%8C%89%E9%8D%B5%E8%AA%AA%E6%98%8E)
+  + [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
+  + [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
 ***
 # 簡介
@@ -24,9 +24,9 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 準備好VR頭戴式顯示器、手把控制器、基地台。  
 由於是VR類型的專案，當遇到無法使用觸控板更改調色盤的時候，請參考下面的解決方法: (請以各家廠牌手把為主，此說明適用HTC VIVE Pro手把)
 
-1. 按下手把的選單鍵，接著進入按鍵*控制器按鍵配置*，將配置改成drawline。(上面有管理此應用程式的控制配置。若無，則直接使用安裝說明1的方式開啟專案檔)。看向畫面中間的使用中的控制器配置，將選項從預設改成自訂。
+1. 按下手把的選單鍵，接著進入按鍵**控制器按鍵配置**，將配置改成drawline。(上面有管理此應用程式的控制配置。若無，則直接使用安裝說明1的方式開啟專案檔)。看向畫面中間的使用中的控制器配置，將選項從預設改成自訂。
 2. 手把按下修改此配置，會出現選單可改手把與配置。左邊往下滑，找到觸控板功能按旁邊的+號標誌。
-3. 跳出一個選單畫面後，最上面會有觸控板跟十字鍵的功能。選擇觸控板，左側會多一個觸控板操作的設定。*位置*欄位選擇Touchpad，*觸控板操作*欄位的左下角打勾。
+3. 跳出一個選單畫面後，最上面會有觸控板跟十字鍵的功能。選擇觸控板，左側會多一個觸控板操作的設定。**位置**欄位選擇Touchpad，**觸控板操作**欄位的左下角打勾。
 4. 最後按下面的儲存個人配置，就可以使用調色盤介面。
 
 ## 手把控制器按鍵說明
