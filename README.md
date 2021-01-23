@@ -2,12 +2,11 @@
 draw_line專案，這是邵鈞組 VR draw 的專案，使用 Unity 2019.4.10f1
 
 ## Link
-+ [簡介](https://github.com/jsyeh/draw_line#簡介)
++ [簡介](https://github.com/jsyeh/draw_line#%E7%B0%A1%E4%BB%8B)
 + [按鍵說明](https://github.com/jsyeh/draw_line#%E6%8C%89%E9%8D%B5%E8%AA%AA%E6%98%8E)
 + [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
 + [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
 *  [Video Link](https://youtu.be/XmyNU33L2q0)
-
 ***
 # 簡介
 此專案可以在VR空間中畫圖，左右手有不同的功能可供使用。  
