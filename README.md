@@ -30,7 +30,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 4. 最後按下面的儲存個人配置，就可以使用調色盤介面。
 
 ## 手把控制器按鍵說明
-<img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="230"><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="230">
+<img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="235"><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="235">
 
 ### 右手手把操作
 右手手把是畫線的，該手把上面沒有ICON功能鍵。下圖為操作圖：  
