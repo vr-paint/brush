@@ -36,7 +36,7 @@ draw_line 專案，這是邵鈞組 VR draw 的專案，使用 Unity 2019.4.10f1
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Touchpad.png" height="350">
 
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="350">
-  
+<font size=20> 右手操作 </font>
 
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/righthand_buttom.png" height="350">
 
