@@ -4,11 +4,11 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 ## Link
 + [簡介](https://github.com/jsyeh/draw_line#%E7%B0%A1%E4%BB%8B)
 + [系統使用](https://github.com/jsyeh/draw_line#%E7%B3%BB%E7%B5%B1%E4%BD%BF%E7%94%A8)
-+ [Unity安裝說明](https://github.com/jsyeh/draw_line#unity%E5%AE%89%E8%A3%9D%E8%AA%AA%E6%98%8E)
-+ [VR操作準備](https://github.com/jsyeh/draw_line#vr%E6%93%8D%E4%BD%9C%E6%BA%96%E5%82%99)
-+ [手把控制器按鍵說明](https://github.com/jsyeh/draw_line#%E6%89%8B%E6%8A%8A%E6%8E%A7%E5%88%B6%E5%99%A8%E6%8C%89%E9%8D%B5%E8%AA%AA%E6%98%8E)
-+ [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
-+ [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
+> + [Unity安裝說明](https://github.com/jsyeh/draw_line#unity%E5%AE%89%E8%A3%9D%E8%AA%AA%E6%98%8E)
+> + [VR操作準備](https://github.com/jsyeh/draw_line#vr%E6%93%8D%E4%BD%9C%E6%BA%96%E5%82%99)
+> + [手把控制器按鍵說明](https://github.com/jsyeh/draw_line#%E6%89%8B%E6%8A%8A%E6%8E%A7%E5%88%B6%E5%99%A8%E6%8C%89%E9%8D%B5%E8%AA%AA%E6%98%8E)
+> + [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
+> + [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
 ***
 # 簡介
