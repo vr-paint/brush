@@ -48,6 +48,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 
 ***
 參考資料:
+
 [1]	謝其叡, 薛猷騰, 何誼庭, 黃慧緣, 呂昱辰, and 葉正聖, "陶藝與浮雕：Leap Motion結合VR之互動塑模," presented at the Computer Graphics Workshop, 台中, 2017.
 [2]	C. Tseng and J.-S. Yeh, "A Kinect-based System for Virtual Sculpture," presented at the Computer Graphics Workshop 台北, 2015.
 [3]	許志遙, 蔡閎鈞, 林伯儒, 邱俊澄, 呂昱辰, and 葉正聖, "以HTC Vive 為基礎 VR 3D繪本," presented at the Computer Graphics Workshop 台北, 2016.
