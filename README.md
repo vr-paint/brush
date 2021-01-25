@@ -65,5 +65,5 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 
 
 其他參考資料:
-https://www.youtube.com/watch?v=eMJATZI0A7c&t=6300s (TiltBrush參考)  
-https://github.com/orifmilod/KdTree-Unity3D   (kdtree演算法引用)
+https://www.youtube.com/watch?v=eMJATZI0A7c&t=6300s (TiltBrush參考)    
+https://github.com/orifmilod/KdTree-Unity3D   (kdtree演算法引用)  
