@@ -45,7 +45,15 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 1. 扣下扳機鍵可以決定使用當前ICON的功能。並且藉由觸控板點擊左右兩側，可以進行功能的切換。
 2. 當使用者點選進入調色盤功能後，觸控板的功能會變成可以透過觸摸不同位置，來決定色環對應位置上方的顏色。
 3. 當使用者在調色盤功能中時，可以按下握持鍵進入調整色度的介面，一樣透過觸控板操作，可以變換當下顏色的色度。
+
 ***
+參考資料:
+[1]	謝其叡, 薛猷騰, 何誼庭, 黃慧緣, 呂昱辰, and 葉正聖, "陶藝與浮雕：Leap Motion結合VR之互動塑模," presented at the Computer Graphics Workshop, 台中, 2017.
+[2]	C. Tseng and J.-S. Yeh, "A Kinect-based System for Virtual Sculpture," presented at the Computer Graphics Workshop 台北, 2015.
+[3]	許志遙, 蔡閎鈞, 林伯儒, 邱俊澄, 呂昱辰, and 葉正聖, "以HTC Vive 為基礎 VR 3D繪本," presented at the Computer Graphics Workshop 台北, 2016.
+[4]	E. Rosales, J. Rodriguez, and A. SHEFFER, "SurfaceBrush: from virtual reality drawings to manifold surfaces," ACM Trans. Graph., vol. 38, no. 4, p. Article 96, 2019.
+[5]	C.-W. Chen, J.-W. Peng, C.-M. Kuo, M.-C. Hu, and Y.-C. Tseng, "Ontlus: 3d content collaborative creation via virtual reality," in International Conference on Multimedia Modeling, 2018: Springer, pp. 386-389.
+[6]	D. Keefe, R. Zeleznik, and D. Laidlaw, "Drawing on Air: Input Techniques for Controlled 3D Line Illustration," IEEE Transactions on Visualization and Computer Graphics, vol. 13, no. 5, pp. 1067-1081, 2007.
+[7]	S. Schkolne, M. Pruett, and P. Schröder, "Surface drawing: creating organic 3D shapes with the hand and tangible tools," presented at the Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, Seattle, Washington, USA, 2001. [Online]. Available: https://doi-org.erm.lib.mcu.edu.tw/10.1145/365024.365114.
 
-
-參考資料:https://github.com/orifmilod/KdTree-Unity3D   (kdtree演算法引用)
+https://github.com/orifmilod/KdTree-Unity3D   (kdtree演算法引用)
