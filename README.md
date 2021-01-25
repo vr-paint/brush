@@ -59,7 +59,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 步驟1:  
 做出一個可擴張的雙層鏈結陣列，可以將所有新增線帶的座標點都可以讀入該陣列中。
 縫合之前要先進行座標點之間的距離判斷，判斷後就可以將兩條距離接近的線帶找出，為下一步的縫合做準備。
-<P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Image/%E7%B7%9A%E5%B8%B6%E9%99%A3%E5%88%97.png" height="350">
+<P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Image/%E7%B7%9A%E5%B8%B6%E9%99%A3%E5%88%97.png" height="240">
 步驟2:
 
 ***
