@@ -57,4 +57,5 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 [6]	D. Keefe, R. Zeleznik, and D. Laidlaw, "Drawing on Air: Input Techniques for Controlled 3D Line Illustration," IEEE Transactions on Visualization and Computer Graphics, vol. 13, no. 5, pp. 1067-1081, 2007.
 [7]	S. Schkolne, M. Pruett, and P. Schröder, "Surface drawing: creating organic 3D shapes with the hand and tangible tools," presented at the Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, Seattle, Washington, USA, 2001. [Online]. Available: https://doi-org.erm.lib.mcu.edu.tw/10.1145/365024.365114.
 
+https://www.youtube.com/watch?v=eMJATZI0A7c&t=6300s (Tilt Brush參考)
 https://github.com/orifmilod/KdTree-Unity3D   (kdtree演算法引用)
