@@ -64,7 +64,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 步驟2:  
 縫合部分使用的方法是將兩點合併為一點的方法。  
 在找到距離相近的座標點後，根據距離算出其對應的兩個座標點的中位座標，利用此座標代替原本的最近點座標，縫合出一個完整的平面，能夠縫合兩條線帶間的空隙。   
-
+<P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Image/%E5%90%88%E4%BD%B5%E6%88%90%E5%B9%B3%E9%9D%A2.png" height="180"> 
 
 ***
 參考資料:  
