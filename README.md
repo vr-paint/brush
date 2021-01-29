@@ -81,5 +81,8 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 
 
 其他參考資料:  
-https://www.youtube.com/watch?v=eMJATZI0A7c&t=6300s (TiltBrush參考)    
-https://github.com/orifmilod/KdTree-Unity3D   (kdtree演算法引用)  
+* [The Future of Tilt Brush](https://opensource.googleblog.com/2021/01/the-future-of-tilt-brush.html?fbclid=IwAR1vozx-rK-ldgz0Tcc2TVXNJutNq1DX1O2dpW7Z0HgNXwDjXyFr8geXPEc "Google Open Source Blog")  
+* [googlevr/tilt-brush](https://github.com/googlevr/tilt-brush "github") 
+* [Unity VR Tutorial: How To Build Tilt Brush From Scratch](https://youtu.be/eMJATZI0A7c "YouTube")  
+* [orifmilod/KdTree-Unity3D](https://github.com/orifmilod/KdTree-Unity3D "github") 
+
