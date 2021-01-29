@@ -70,7 +70,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Image/%E5%90%88%E4%BD%B5%E6%88%90%E5%B9%B3%E9%9D%A2.png" height="180"> 
 
 ***
-### 參考資料
+### 參考文獻
 ```
 [1]	謝其叡, 薛猷騰, 何誼庭, 黃慧緣, 呂昱辰, and 葉正聖, "陶藝與浮雕：Leap Motion結合VR之互動塑模," presented at the Computer Graphics Workshop, 台中, 2017.
 [2]	C. Tseng and J.-S. Yeh, "A Kinect-based System for Virtual Sculpture," presented at the Computer Graphics Workshop 台北, 2015.
@@ -82,7 +82,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 [8]	S.-H. Bae, R. Balakrishnan, and K. Singh, "ILoveSketch: as-natural-as-possible sketching system for creating 3d curve models," presented at the Proceedings of the 21st annual ACM symposium on User interface software and technology, Monterey, CA, USA, 2008. [Online]. Available: https://doi-org.erm.lib.mcu.edu.tw/10.1145/1449715.1449740.
 ```
 
-#### 其他參考資料
+#### 參考資料
 * [The Future of Tilt Brush](https://opensource.googleblog.com/2021/01/the-future-of-tilt-brush.html?fbclid=IwAR1vozx-rK-ldgz0Tcc2TVXNJutNq1DX1O2dpW7Z0HgNXwDjXyFr8geXPEc "Google Open Source Blog")  
 * [github/googlevr/tilt-brush](https://github.com/googlevr/tilt-brush "github") 
 * [Unity VR Tutorial: How To Build Tilt Brush From Scratch](https://youtu.be/eMJATZI0A7c "YouTube")  
