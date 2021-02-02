@@ -5,6 +5,7 @@
 接下來只要移動手把的時候就會接連產生多個平面，最終連接的平面將會成為一整條的線帶。  
 [Unity - Mesh](https://docs.unity3d.com/ScriptReference/Mesh.html)  
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Image/quad.png" height="250"> 
+  
   手把上的三個向量:forward、up、right 向量,當使用 forward 與 up向量做外積,可以形成延展平面所需的 Bi-Normal 向量,當使用者拖曳手把畫線時,能夠產生對應的等距座標點,在座標點產生的當下就可連接點與點產生四個三角形組成的平面。
   最後利用手把的 right 向量,用以產生法向量,來畫出所需的立體線帶。當使用者拖曳手把畫線時,就能夠運用此向量來延展平面,畫出所需的立體線帶。順帶一提,手把上的 right 向量就是延展平面所需的 Bi-Normal 向量,因此直接使用 right 向量仍可以畫出相同的結果。
   
