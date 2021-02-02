@@ -18,7 +18,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.2.21f1*
 
 ## Unity安裝說明
 1. 進入[Unity download archive](https://unity3d.com/get-unity/download/archive)安裝*2019.2.21f1*版本，並使用UnityHub開啟專案。
-2. 我們有另外準備執行檔使用，點開game資料夾中的draw_line執行檔案。
+2. 我們有另外準備[執行檔](https://drive.google.com/file/d/1uKlinXyja1ZLymo6fSq7yu2fxcNJh7AM/view?usp=sharing)使用，點開game資料夾中的draw_line執行檔案。
 
 ## VR操作準備
 準備好VR頭戴式顯示器、手把控制器、基地台。  
