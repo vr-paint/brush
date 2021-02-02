@@ -1,5 +1,5 @@
 # VR漆刷式繪畫
-draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*  
+draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.2.21f1*  
 
 ## Link
 + [簡介](https://github.com/jsyeh/draw_line#%E7%B0%A1%E4%BB%8B)
@@ -17,7 +17,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.4.10f1*
 # 系統使用
 
 ## Unity安裝說明
-1. 進入[Unity download archive](https://unity3d.com/get-unity/download/archive)安裝*2019.2.20*版本，並使用UnityHub開啟專案。
+1. 進入[Unity download archive](https://unity3d.com/get-unity/download/archive)安裝*2019.2.21f1*版本，並使用UnityHub開啟專案。
 2. 我們有另外準備執行檔使用，點開game資料夾中的draw_line執行檔案。
 
 ## VR操作準備
