@@ -51,9 +51,9 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.2.21f1*
 
 ### 線帶繪畫
 先將點座標以等距方式來記錄，移動手把可以依序產生中、上、下3個新的點座標。
-讓產生的點相互連接，形成三角形，將四個三角形合併成平面，如圖右。
+讓產生的點相互連接，形成三角形，將四個三角形合併成平面。
 接下來只要移動手把的時候就會接連產生多個平面，最終連接的平面將會成為一整條的線帶。  
-[Unity - Mesh](https://docs.unity3d.com/ScriptReference/Mesh.html)
+[Unity - Mesh](https://docs.unity3d.com/ScriptReference/Mesh.html)  
 <P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Image/quad.png" height="250"> 
   
 ### 線帶縫合
