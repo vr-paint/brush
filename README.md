@@ -1,5 +1,4 @@
 # VR漆刷式繪畫
-draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.2.21f1*  
 
 ## Link
 + [簡介](https://github.com/jsyeh/draw_line#%E7%B0%A1%E4%BB%8B)
@@ -12,6 +11,7 @@ draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.2.21f1*
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
 ***
 # 簡介
+draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.2.21f1*  
 此專案可以在VR空間中畫圖，左右手有不同的功能可供使用。  
 
 # 系統使用
