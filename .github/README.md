@@ -8,7 +8,7 @@
   + [手把控制器按鍵說明](https://github.com/jsyeh/draw_line#%E6%89%8B%E6%8A%8A%E6%8E%A7%E5%88%B6%E5%99%A8%E6%8C%89%E9%8D%B5%E8%AA%AA%E6%98%8E)
     + [右手手把操作](https://github.com/jsyeh/draw_line#%E5%8F%B3%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
     + [左手手把操作](https://github.com/jsyeh/draw_line#%E5%B7%A6%E6%89%8B%E6%89%8B%E6%8A%8A%E6%93%8D%E4%BD%9C)
-+ [研究方法](.github/Readme_ResearchMethods.md)
++ [研究方法](https://github.com/jsyeh/draw_line/blob/main/.github/Readme_ResearchMethods.md)
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
 ***
 # 簡介
