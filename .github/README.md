@@ -12,7 +12,7 @@
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
 ***
 # 簡介
-draw_line專案，這是邵鈞組 VR draw 的專案，使用*Unity 2019.2.21f1*  
+draw_line專案，這是邵鈞組 VR brush 的專案，使用*Unity 2019.2.21f1*  
 此專案可以在VR空間中畫圖，左右手有不同的功能可供使用。  
 
 # 系統使用
