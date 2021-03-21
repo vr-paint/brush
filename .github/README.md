@@ -27,7 +27,7 @@ draw_line專案，這是邵鈞組 VR brush 的專案，使用*Unity 2019.2.21f1*
 4. 最後按下面的儲存個人配置，就可以使用調色盤介面。
 
 ## 手把控制器按鍵說明
-<img src="https://github.com/vr-paint/brush/tree/main/Assets/picture/explain_user/Touchpad.png" height="240"><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="240">
+<img src="https://github.com/vr-paint/brush/blob/main/Assets/picture/explain_user/Touchpad.png" height="240"><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/Trigger%20Grip.png" height="240">
 
 ### 右手手把操作
 右手手把是畫線的，該手把上面沒有ICON功能鍵。下圖為操作圖：  
@@ -38,7 +38,7 @@ draw_line專案，這是邵鈞組 VR brush 的專案，使用*Unity 2019.2.21f1*
 
 ### 左手手把操作
 左手手把的主要作用是繪畫功能選擇，下圖為操作圖：  
-<P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/trigger_side.png" height="350">  
+<P Align=center><img src="https://github.com/vr-paint/brush/blob/main/Assets/picture/explain_user/trigger_side.png" height="350">  
  
 1. 扣下扳機鍵可以決定使用當前ICON的功能。並且藉由觸控板點擊左右兩側，可以進行功能的切換。
 2. 當使用者點選進入調色盤功能後，觸控板的功能會變成可以透過觸摸不同位置，來決定色環對應位置上方的顏色。
