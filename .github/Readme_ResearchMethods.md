@@ -3,7 +3,7 @@
 先將點座標以等距方式來記錄，移動手把可以依序產生中、上、下3個新的點座標。讓產生的點相互連接，形成三角形，將四個三角形合併成平面。
 接下來只要移動手把的時候就會接連產生多個平面，最終連接的平面將會成為一整條的線帶。  
 [Unity - Mesh](https://docs.unity3d.com/ScriptReference/Mesh.html)  
-<P Align=center><img src="https://github.com/vr-paint/brush/blob/main/Image/quad.png"> 
+<P Align=center><img src="https://github.com/vr-paint/brush/blob/main/Image/quad.png" height="180"> 
   
   手把上的三個向量:forward、up、right 向量,當使用 forward 與 up向量做外積,可以形成延展平面所需的 Bi-Normal 向量,當使用者拖曳手把畫線時,能夠產生對應的等距座標點,在座標點產生的當下就可連接點與點產生四個三角形組成的平面。  
   當使用者拖曳手把畫線時,就能夠運用此向量來延展平面,畫出所需的立體線帶。順帶一提,手把上的 right 向量就是延展平面所需的 Bi-Normal 向量,因此直接使用 right 向量仍可以畫出相同的結果。
@@ -20,4 +20,4 @@
 步驟2:  
 縫合部分使用的方法是將兩點合併為一點的方法。  
 在找到距離相近的座標點後，根據距離算出其對應的兩個座標點的中位座標，利用此座標代替原本的最近點座標，縫合出一個完整的平面，能夠縫合兩條線帶間的空隙。   
-<P Align=center><img src="https://github.com/vr-paint/brush/blob/main/Image/%E7%B8%AB%E5%90%883.png"> 
+<P Align=center><img src="https://github.com/vr-paint/brush/blob/main/Image/%E7%B8%AB%E5%90%883.png" height="180"> 
