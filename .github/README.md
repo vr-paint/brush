@@ -31,7 +31,7 @@ draw_line專案，這是邵鈞組 VR brush 的專案，使用*Unity 2019.2.21f1*
 
 ### 右手手把操作
 右手手把是畫線的，該手把上面沒有ICON功能鍵。下圖為操作圖：  
-<P Align=center><img src="https://github.com/jsyeh/draw_line/blob/main/Assets/picture/explain_user/righthand_buttom.png" height="350">  
+<P Align=center><img src="https://github.com/vr-paint/brush/blob/main/Assets/picture/explain_user/righthand_buttom.png" height="350">  
  
 1. 扣下扳機鍵即可繪製出具有3D立體感的平面，這些平面會化成使用者作畫的線條存在在3D空間當中。
 2. 使用者可以透過扣手把板機的力道決定線條的粗細，減少了調整粗細的ICON，使得使用者操作變得更加方便。
