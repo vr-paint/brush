@@ -20,4 +20,4 @@
 步驟2:  
 縫合部分使用的方法是將兩點合併為一點的方法。  
 在找到距離相近的座標點後，根據距離算出其對應的兩個座標點的中位座標，利用此座標代替原本的最近點座標，縫合出一個完整的平面，能夠縫合兩條線帶間的空隙。   
-<P Align=center><img src=""https://github.com/vr-paint/brush/blob/main/Image/%E7%B8%AB%E5%90%883.png> 
+<P Align=center><img src=""https://github.com/vr-paint/brush/blob/main/Image/%E7%B8%AB%E5%90%883.png"> 
