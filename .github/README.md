@@ -1,14 +1,11 @@
 # VR漆刷式繪畫
-
+brush專案，是邵鈞組 VR brush 的專案，使用*Unity 2019.2.21f1*  
+此專案可以在VR空間中畫圖，左右手有不同的功能可供使用。  
 ## Link 
 + [系統使用](https://github.com/vr-paint/brush#%E7%B3%BB%E7%B5%B1%E4%BD%BF%E7%94%A8)
 + [研究方法](https://github.com/vr-paint/brush/blob/ec404d3b6a79cb90b4d631c41713c9af91efe738/.github/Readme_ResearchMethods.md)
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
 ***
-# 簡介
-draw_line專案，這是邵鈞組 VR brush 的專案，使用*Unity 2019.2.21f1*  
-此專案可以在VR空間中畫圖，左右手有不同的功能可供使用。  
-
 # 系統使用
 
 ## Unity安裝說明
