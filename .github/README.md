@@ -1,5 +1,5 @@
 # VR漆刷式繪畫
-brush 是[邵鈞組](https://github.com/vr-paint) VR-paint_brush 的專案，使用*Unity 2019.2.21f1*  
+此資料庫是[邵鈞組](https://github.com/vr-paint) VR-paint_brush 的專案，使用*Unity 2019.2.21f1*  
 此專案可以在VR空間中畫圖，左右手有不同的功能可供使用。  
 ## Link 
 + [系統使用](https://github.com/vr-paint/brush#%E7%B3%BB%E7%B5%B1%E4%BD%BF%E7%94%A8)
