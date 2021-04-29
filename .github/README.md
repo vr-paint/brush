@@ -5,6 +5,7 @@
 + [系統使用](https://github.com/vr-paint/brush#%E7%B3%BB%E7%B5%B1%E4%BD%BF%E7%94%A8)
 + [研究方法](https://github.com/vr-paint/brush/blob/ec404d3b6a79cb90b4d631c41713c9af91efe738/.github/Readme_ResearchMethods.md)
 *  [Video Link](https://youtu.be/XmyNU33L2q0 "YouTube")
+*  [Web Link](https://github.com/vr-paint/brush-web "Web")
 ***
 # 系統使用
 
